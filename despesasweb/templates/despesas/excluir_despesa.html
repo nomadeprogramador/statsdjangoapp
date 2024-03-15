@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <div>
+        <h2> OLÁ {{request.user}} VOCE QUER EXCLUIR A DESPESA ? </h2>
+        <h3> {{despesa.nome}} Criada em {{despesa.data|date:'d/m/y'}}</h3>
+        <form action=""  method="post">
+            {% csrf_token %}
+            <button class="btn btn-success" type="submit"> EXCLUIR DESPESA </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
